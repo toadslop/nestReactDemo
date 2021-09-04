@@ -2,9 +2,9 @@
   "type": "mysql",
   "host": "localhost",
   "port": 3306,
-  "username": "root",
-  "password": "root",
-  "database": "test",
+  "username": "taskmanager",
+  "password": "6AOd(D=dr4Xo@Z_}",
+  "database": "taskmanager",
   "entities": ["dist/**/*.entity{.ts,.js}"],
   "synchronize": true
 }
