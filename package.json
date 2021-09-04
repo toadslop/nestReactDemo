@@ -1,0 +1,19 @@
+{
+  "name": "nestreactdemo",
+  "version": "1.0.0",
+  "description": "A demo app using NestJS backend and ReactJS frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toadslop/nestReactDemo.git"
+  },
+  "author": "Toadslop",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/toadslop/nestReactDemo/issues"
+  },
+  "homepage": "https://github.com/toadslop/nestReactDemo#readme"
+}
