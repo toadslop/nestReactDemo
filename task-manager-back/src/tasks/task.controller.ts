@@ -1,4 +1,4 @@
-import { Controller, Get, Delete } from '@nestjs/common';
+import { Controller, Get, Delete, Post, Body, Param } from '@nestjs/common';
 import { TaskService } from './task.service';
 import { Task } from './task.entity';
 
@@ -12,12 +12,18 @@ export class TaskController {
   }
 
   @Get(':id')
-  async findOne(id: string): Promise<Task> {
+  async findOne(@Param('id') id: Task['id']): Promise<Task> {
+    console.log(id);
     return this.taskService.findOne(id);
   }
 
+  @Post()
+  async create(@Body() task: Task): Promise<Task> {
+    return this.taskService.create(task);
+  }
+
   @Delete(':id')
-  async remove(id: string): Promise<void> {
+  async remove(@Param('id') id: Task['id']): Promise<void> {
     await this.taskService.remove(id);
   }
 }
