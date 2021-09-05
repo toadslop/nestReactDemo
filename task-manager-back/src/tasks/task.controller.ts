@@ -17,8 +17,8 @@ export class TaskController {
   }
 
   @Post()
-  async create(@Body() task: Task): Promise<Task> {
-    return this.taskService.create(task);
+  async upsert(@Body() task: Task): Promise<Task> {
+    return this.taskService.upsert(task);
   }
 
   @Delete(':id')

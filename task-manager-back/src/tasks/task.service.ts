@@ -18,7 +18,7 @@ export class TaskService {
     return this.taskRepository.findOne(id);
   }
 
-  async create(newTask: Task): Promise<Task> {
+  async upsert(newTask: Task): Promise<Task> {
     return this.taskRepository.save(newTask);
   }
 
