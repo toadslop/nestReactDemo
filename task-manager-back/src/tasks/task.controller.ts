@@ -13,7 +13,6 @@ export class TaskController {
 
   @Get(':id')
   async findOne(@Param('id') id: Task['id']): Promise<Task> {
-    console.log(id);
     return this.taskService.findOne(id);
   }
 
