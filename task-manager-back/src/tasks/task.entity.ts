@@ -2,14 +2,17 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Task {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column()
   dueDate: Date;
 
   @Column()
-  asignee: string;
+  title: string;
+
+  @Column()
+  assignee: string;
 
   @Column({ default: false })
   isFinished: boolean;
