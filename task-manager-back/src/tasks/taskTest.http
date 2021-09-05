@@ -1,1 +1,20 @@
-GET http://localhost:3000/ HTTP/1.1
+### Get all tasks
+GET http://localhost:3000/task HTTP/1.1
+
+### Get ONE task
+GET http://localhost:3000/task/aec4e7dc-1f6e-48a1-98ed-bfc9a58551c3 HTTP/1.1
+
+### Create a task
+POST http://localhost:3000/task HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Clean dishes",
+    "assignee": "Seya",
+    "dueDate": "2021-09-05 12:05:27",
+    "comment": "You left dishes in the sink for 3 days"
+}
+
+### DELETE a task
+DELETE http://localhost:3000/task/2 HTTP/1.1
+content-type: application/json
