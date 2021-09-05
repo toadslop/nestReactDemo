@@ -10,15 +10,19 @@ export class TaskService {
     private taskRepository: Repository<Task>,
   ) {}
 
-  async findAll(): Promise<Task[]> {
+  findAll(): Promise<Task[]> {
     return this.taskRepository.find();
   }
 
-  async findOne(id: string): Promise<Task> {
+  findOne(id: Task['id']): Promise<Task> {
     return this.taskRepository.findOne(id);
   }
 
-  async remove(id: string): Promise<void> {
+  async create(newTask: Task): Promise<Task> {
+    return this.taskRepository.save(newTask);
+  }
+
+  async remove(id: Task['id']): Promise<void> {
     await this.taskRepository.delete(id);
   }
 }
