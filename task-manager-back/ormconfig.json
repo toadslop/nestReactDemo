@@ -6,5 +6,9 @@
   "password": "6AOd(D=dr4Xo@Z_}",
   "database": "taskmanager",
   "entities": ["dist/**/*.entity{.ts,.js}"],
-  "synchronize": true
+  "synchronize": true,
+  "migrations": ["migration/*.ts"],
+  "cli": {
+    "migrationsDir": "migration"
+  }
 }
